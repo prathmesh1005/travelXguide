@@ -25,7 +25,10 @@ const port = process.env.PORT || 5000;
 connectDB();
 
 // Allowed frontend origins
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://travelxguide1-1.onrender.com" // 👈 Add your deployed frontend URL here
+];
 
 // Middlewares
 app.use(express.json());
