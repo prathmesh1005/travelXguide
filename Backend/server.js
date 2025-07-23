@@ -26,10 +26,9 @@ connectDB();
 
 // Allowed frontend origins
 const allowedOrigins = [
-  "http://localhost:5173",
-  "https://travelxguide1-1.onrender.com" // 👈 Add your deployed frontend URL here
+  "https://travelxguide1.onrender.com", // your frontend Render URL
+  "http://localhost:5173",              // for local dev (optional)
 ];
-
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
