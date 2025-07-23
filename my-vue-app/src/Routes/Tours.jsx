@@ -52,7 +52,8 @@ function Tours() {
         confirmButtonText: "Go to Login",
         background: '#1f2937',
         color: '#fff',
-        confirmButtonColor: '#3b82f6'
+        confirmButtonColor: '#3b82f6',
+        allowOutsideClick: false
       }).then((result) => {
         if (result.isConfirmed) {
           navigate("/signup");

@@ -33,6 +33,7 @@ export default function Community() {
         background: "#1a1a2e",
         color: "#ffffff",
         confirmButtonColor: "#4f46e5",
+        allowOutsideClick: false
       }).then((result) => {
         if (result.isConfirmed) {
           navigate("/signup");

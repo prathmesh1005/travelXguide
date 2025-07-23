@@ -6,6 +6,7 @@ import { X, Star, MapPin, Languages, Clock, IndianRupee, User, Plus, Search } fr
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import GuideCard from "../components/GuideCard";
+import Swal from "sweetalert2";
 
 function Guide() {
   const [guides, setGuides] = useState([]);
@@ -19,8 +20,27 @@ function Guide() {
   const [showFilters, setShowFilters] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   
-  const { backendUrl } = useContext(AppContext);
+  const { backendUrl, isLoggedin, userData } = useContext(AppContext);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!isLoggedin || !userData) {
+      Swal.fire({
+        title: "Login Required",
+        text: "You need to log in to access this page.",
+        icon: "warning",
+        confirmButtonText: "Go to Login",
+        background: '#1f2937',
+        color: '#fff',
+        confirmButtonColor: '#3b82f6',
+        allowOutsideClick: false
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate("/signup");
+        }
+      });
+    }
+  }, [isLoggedin, userData, navigate]);
 
   // Get unique destinations and languages from guides
   const allDestinations = [...new Set(guides.flatMap(guide => guide.destinations))].sort();
