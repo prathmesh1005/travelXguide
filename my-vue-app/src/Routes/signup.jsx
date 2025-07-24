@@ -78,8 +78,8 @@ const Signup = () => {
   
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4 mt-10">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-xl overflow-hidden">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-2 sm:p-4 mt-6 sm:mt-10">
+      <div className="w-full max-w-xs sm:max-w-md bg-white rounded-xl sm:rounded-2xl shadow-xl overflow-hidden">
         {/* Decorative header */}
         <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-6 text-center">
           <h1 className="text-3xl font-bold text-white">

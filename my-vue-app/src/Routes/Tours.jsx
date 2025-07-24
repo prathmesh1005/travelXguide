@@ -169,19 +169,19 @@ function Tours() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-gray-100 pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-gray-100 pt-20 md:pt-24 pb-8 md:pb-12 px-2 sm:px-4 lg:px-8">
       {/* Hero Banner */}
-      <div className="relative max-w-4xl mx-auto mb-10 animate-slide-up">
-        <img src={daljheel} alt="Travel Hero" className="w-full h-56 object-cover rounded-3xl shadow-lg" />
-        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 to-transparent rounded-3xl flex flex-col justify-end p-8">
-          <h1 className="text-4xl font-extrabold text-white drop-shadow-lg">Plan Your Dream Trip</h1>
-          <p className="mt-2 text-lg text-blue-100">Let our AI create a personalized itinerary for you!</p>
+      <div className="relative max-w-4xl mx-auto mb-8 md:mb-10 animate-slide-up">
+        <img src={daljheel} alt="Travel Hero" className="w-full h-40 sm:h-56 object-cover rounded-2xl md:rounded-3xl shadow-lg" />
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 to-transparent rounded-2xl md:rounded-3xl flex flex-col justify-end p-4 md:p-8">
+          <h1 className="text-2xl sm:text-4xl font-extrabold text-white drop-shadow-lg">Plan Your Dream Trip</h1>
+          <p className="mt-1 sm:mt-2 text-base sm:text-lg text-blue-100">Let our AI create a personalized itinerary for you!</p>
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
         {/* Main Form (2/3) */}
-        <div className="md:col-span-2 bg-white rounded-3xl shadow-xl p-8 sm:p-10 lg:p-12 animate-fade-in">
+        <div className="md:col-span-2 bg-white rounded-2xl md:rounded-3xl shadow-xl p-4 sm:p-6 md:p-10 lg:p-12 animate-fade-in">
           <Stepper />
           {/* Step 1: Destination */}
           {step === 0 && (

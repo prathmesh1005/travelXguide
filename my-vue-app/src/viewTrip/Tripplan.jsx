@@ -62,7 +62,7 @@ function TripPlan() {
   }, [destination, days, budget, traveler, location.state]);
 
   return (
-    <div className='p-10 md:px-20 lg:px-44 xl:px-56'>
+    <div className='p-4 sm:p-8 md:px-20 lg:px-32 xl:px-56'>
       {/* ✅ Pass Image URLs to Components */}
       <InfoSection trip={trip} />
       <Hotels trip={trip} tripData={tripData} hotelImages={hotelImages} />

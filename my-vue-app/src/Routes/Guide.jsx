@@ -104,24 +104,24 @@ function Guide() {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Section */}
-      <div className="relative w-full h-96 overflow-hidden">
+      <div className="relative w-full h-56 md:h-96 overflow-hidden">
         <img 
           src="/01.jpg" 
           alt="Tour Guides" 
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex flex-col items-center justify-end pb-16 px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-white text-center mb-4">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex flex-col items-center justify-end pb-8 md:pb-16 px-2 md:px-4">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-2 md:mb-4">
             Discover Expert Tour Guides
           </h1>
-          <p className="text-lg text-gray-200 text-center max-w-2xl">
+          <p className="text-base md:text-lg text-gray-200 text-center max-w-lg md:max-w-2xl">
             Connect with certified local guides who will bring your travel experience to life
           </p>
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-6 md:py-12">
         {/* Search and Filter Controls */}
         <div className="bg-white rounded-xl shadow-md p-6 mb-8">
           {/* Search Bar */}

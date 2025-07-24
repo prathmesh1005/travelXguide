@@ -136,25 +136,7 @@ const Navbar = () => {
               </Link>
             ))}
 
-            {/* Admin Login Mobile Button */}
-            <Link
-              to="/admin/login"
-              className="block w-full py-2 mt-4 bg-gradient-to-r from-red-600 to-orange-500 text-white rounded-lg hover:shadow-lg transition-all text-center"
-              onClick={() => setIsOpen(false)}
-            >
-              Admin Login
-            </Link>
-
-            {/* Become a Guide Mobile Button */}
-            <button
-              onClick={() => {
-                setShowGuideForm(true);
-                setIsOpen(false);
-              }}
-              className="block w-full py-2 mt-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-lg hover:shadow-lg transition-all"
-            >
-              Become a Guide
-            </button>
+            {/* Removed Admin Login and Become a Guide Mobile Buttons */}
 
             <div className="pt-4">
               {isLoggedin && userData ? (

@@ -155,9 +155,9 @@ export default function Community() {
   };
 
   return (
-    <div className="flex h-screen bg-gray-100 mt-20">
+    <div className="flex flex-col md:flex-row h-screen bg-gray-100 mt-16 md:mt-20">
       {/* Sidebar - Can be toggled in mobile view */}
-      <div className="hidden md:block w-80 bg-white border-r border-gray-200 p-4">
+      <div className="hidden md:block w-64 md:w-80 bg-white border-r border-gray-200 p-4">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-semibold text-gray-800">Community Chat</h2>
           <span className="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">
