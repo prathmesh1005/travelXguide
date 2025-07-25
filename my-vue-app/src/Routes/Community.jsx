@@ -199,9 +199,9 @@ export default function Community() {
       </div>
 
       {/* Main Chat Area */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col min-h-0">
         {/* Chat Header */}
-        <div className="bg-white border-b border-gray-200 p-4 flex items-center justify-between shadow-sm">
+        <div className="bg-white border-b border-gray-200 p-4 flex items-center justify-between shadow-sm sticky top-0 z-20">
           <div className="flex items-center">
             <button 
               onClick={() => navigate(-1)} 
@@ -228,7 +228,7 @@ export default function Community() {
         </div>
 
         {/* Messages Container */}
-        <div className="flex-1 overflow-y-auto p-4 bg-gray-50">
+        <div className="flex-1 overflow-y-auto p-4 bg-gray-50 min-h-0">
           {messages.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full text-gray-500">
               <div className="bg-white p-6 rounded-xl shadow-sm text-center max-w-md">
@@ -281,7 +281,7 @@ export default function Community() {
         </div>
 
         {/* Message Input */}
-        <div className="bg-white border-t border-gray-200 p-4 relative">
+        <div className="bg-white border-t border-gray-200 p-4 relative sticky bottom-0 z-20">
           {showEmojiPicker && (
             <div className="absolute bottom-16 left-0 right-0 md:left-auto md:right-4">
               <EmojiPicker 

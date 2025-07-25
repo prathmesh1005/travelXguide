@@ -1,7 +1,7 @@
 import React from "react";
 import { User } from "lucide-react";
 
-function GuideCard({ guide }) {
+function GuideCard({ guide, onKnowMore }) {
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
   return (
     <div className="bg-white shadow-lg rounded-2xl overflow-hidden mb-8 flex flex-col items-center transition-transform hover:scale-105 hover:shadow-2xl p-6 max-w-xs mx-auto">
@@ -27,7 +27,10 @@ function GuideCard({ guide }) {
       </p>
       <div className="flex-grow" />
       <div className="flex items-center justify-between w-full mt-2">
-        <button className="text-white bg-red-600 px-6 py-2 rounded-lg hover:bg-red-700 transition-colors font-medium">
+        <button
+          className="text-white bg-red-600 px-6 py-2 rounded-lg hover:bg-red-700 transition-colors font-medium"
+          onClick={() => onKnowMore && onKnowMore(guide)}
+        >
           Know More
         </button>
         <div className="flex text-yellow-500 ml-2 text-lg">

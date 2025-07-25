@@ -287,7 +287,7 @@ function Guide() {
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredGuides.map((guide) => (
-                  <GuideCard key={guide._id} guide={guide} />
+                  <GuideCard key={guide._id} guide={guide} onKnowMore={openGuideDetails} />
                 ))}
               </div>
             )}
@@ -302,13 +302,8 @@ function Guide() {
           <Dialog.Content className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-xl shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto z-50">
             {selectedGuide && (
               <>
-                <div className="relative">
-                  <img
-                    src={selectedGuide.profileImage || `https://source.unsplash.com/random/400x400/?portrait,guide,${selectedGuide.name}`}
-                    alt={selectedGuide.name}
-                    className="w-full h-64 object-cover"
-                  />
-                  <Dialog.Close className="absolute top-4 right-4 bg-white/80 hover:bg-white p-2 rounded-full shadow-md">
+                <div className="flex justify-end">
+                  <Dialog.Close className="bg-white/80 hover:bg-white p-2 rounded-full shadow-md">
                     <X className="w-5 h-5 text-gray-700" />
                   </Dialog.Close>
                 </div>
@@ -344,7 +339,26 @@ function Guide() {
                               <div className="font-medium">{selectedGuide.destinations.join(", ")}</div>
                             </div>
                           </div>
-                          
+                          {/* Email */}
+                          {selectedGuide.email && (
+                            <div className="flex items-center">
+                              <svg className="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 12H8m8 0a4 4 0 11-8 0 4 4 0 018 0zm0 0v1a4 4 0 01-4 4H8a4 4 0 01-4-4v-1" /></svg>
+                              <div>
+                                <div className="text-sm text-gray-500">Email</div>
+                                <div className="font-medium">{selectedGuide.email}</div>
+                              </div>
+                            </div>
+                          )}
+                          {/* Phone */}
+                          {selectedGuide.phone && (
+                            <div className="flex items-center">
+                              <svg className="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                              <div>
+                                <div className="text-sm text-gray-500">Phone</div>
+                                <div className="font-medium">{selectedGuide.phone}</div>
+                              </div>
+                            </div>
+                          )}
                           <div className="flex items-center">
                             <Languages className="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" />
                             <div>

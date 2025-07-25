@@ -11,16 +11,16 @@ function Home() {
   return (
     <div className="overflow-x-hidden">
       {/* Navbar + Hero */}
-      <div className="relative w-full h-screen">
+      <div className="relative w-full min-h-[60vh] md:h-screen">
         <Navbar />
         <Hero />
         
-        {/* Scroll indicator */}
+        {/* Scroll indicator (desktop only) */}
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2 }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center hidden md:flex"
         >
           <span className="text-white mb-2 text-sm">Scroll Down</span>
           <div className="w-5 h-8 border-2 border-white rounded-full flex justify-center">
